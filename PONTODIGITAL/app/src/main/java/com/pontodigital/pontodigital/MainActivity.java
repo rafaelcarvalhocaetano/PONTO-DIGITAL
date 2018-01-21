@@ -22,12 +22,10 @@ public class MainActivity extends AppCompatActivity {
         animation(root);
 
 
-
-
     }
 
     public void animation(ViewGroup v){
-        TransitionManager.beginDelayedTransition(v, Slide());
+        TransitionManager.beginDelayedTransition(v, new Slide());
         startActivity(new Intent(MainActivity.this, Acesso.class));
         finish();
     }

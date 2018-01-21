@@ -23,15 +23,28 @@
         android:text="PONTO DIGITAL"
         android:textSize="30sp"
         android:gravity="center"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/texto_botao"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="ACESSAR"
+        android:textSize="20sp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/fundo_botao"
+        android:textColor="@color/texto_botao"/>
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="By Rafael Carvalho"
         android:gravity="center"
-        android:layout_marginTop="150dp"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/texto_botao"
         android:textStyle="bold"
-        android:textSize="18dp"/>
+        android:textSize="15dp"/>
 
 </LinearLayout>
