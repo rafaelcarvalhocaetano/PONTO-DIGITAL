@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/pd"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pontodigital.pontodigital.MainActivity">
+    tools:context="com.pontodigital.pontodigital.MainActivity"
+    android:background="@drawable/fundo_pd">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="120dp"
+        android:src="@color/cardview_dark_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PONTO DIGITAL"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By Rafael Carvalho"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18dp"/>
+
+</LinearLayout>
