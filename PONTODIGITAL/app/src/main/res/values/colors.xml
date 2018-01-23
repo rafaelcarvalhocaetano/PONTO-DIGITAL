@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="texto_botao">#FFFFFF</color>
 
-    <color name="empresa">#44FFFFFF</color>
+    <color name="empresa">#55FFFFFF</color>
     <color name="view_card">#FFFFFF</color>
     <color name="card_text">#000000</color>
 </resources>
