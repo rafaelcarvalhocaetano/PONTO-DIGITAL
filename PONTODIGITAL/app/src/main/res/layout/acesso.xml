@@ -25,15 +25,15 @@
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="@color/empresa">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="70dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/empresa"
-                    android:background="@drawable/fundo_img_card"/>
+                    android:src="@drawable/empresa"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="EMPRESAS"
-                    android:textColor="@color/card_text"
+                    android:textColor="@color/view_card"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"/>
                 <View
@@ -72,16 +72,15 @@
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
-                android:contextClickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="@color/empresa">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="70dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/empresa"
-                    android:background="@drawable/fundo_img_card"/>
+                    android:src="@drawable/empresa" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -89,7 +88,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:text="POSTO"
-                    android:textColor="@color/card_text"
+                    android:textColor="@color/view_card"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"/>
                 <View
@@ -119,7 +118,10 @@
             android:layout_marginTop="40dp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            />
 
     </LinearLayout>
 
