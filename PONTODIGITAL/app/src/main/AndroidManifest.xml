@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Acesso"/>
+        <activity android:name=".AcessoPosto"/>
     </application>
 
 </manifest>
