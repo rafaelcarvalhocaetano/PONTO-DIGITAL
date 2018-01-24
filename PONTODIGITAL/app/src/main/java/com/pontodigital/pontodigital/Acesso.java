@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
 
 
 /**
@@ -15,7 +16,7 @@ import android.view.View;
 public class Acesso extends AppCompatActivity {
 
 
-    private CardView cv;
+    private TextView cadastro;
 
 
     @Override
@@ -23,15 +24,17 @@ public class Acesso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acesso);
 
-        cv = (CardView) findViewById(R.id.card);
 
-        cv.setOnClickListener(new View.OnClickListener() {
+        cadastro = (TextView) findViewById(R.id.cadastrar);
+
+
+        cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Acesso.this, AcessoPosto.class);
-                startActivity(i);
-                finish();
+                startActivity(new Intent(Acesso.this, CadastroActivity.class));
             }
         });
+
+
     }
 }

@@ -110,6 +110,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/cadastrar"
             android:layout_width="180dp"
             android:layout_height="50sp"
             android:background="@drawable/fundo_texto_acesso"

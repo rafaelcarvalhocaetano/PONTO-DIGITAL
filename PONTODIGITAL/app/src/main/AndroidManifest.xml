@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".Acesso"/>
         <activity android:name=".AcessoPosto"/>
+        <activity android:name=".CadastroActivity"/>
     </application>
 
 </manifest>
