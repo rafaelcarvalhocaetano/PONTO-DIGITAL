@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pontodigital.pontodigital.MainActivity"
-    android:background="@drawable/fundo_pd">
+    android:background="@drawable/black">
 
     <ImageView
         android:layout_width="200dp"
@@ -26,7 +26,7 @@
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:textColor="@color/texto_botao"/>
-    <Button
+    <TextView
         android:id="@+id/acesso"
         android:layout_width="300dp"
         android:layout_height="50dp"

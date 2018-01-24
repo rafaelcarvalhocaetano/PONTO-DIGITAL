@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundo_pd"
+    android:background="@drawable/unnamed"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -25,15 +25,17 @@
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 android:clickable="true"
+                android:elevation="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/empresa">
+                app:cardBackgroundColor="#c9dc0f04">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/empresa"/>
+                    android:src="@drawable/empresa"
+                    android:background="@drawable/fundo_img_card"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -74,14 +76,15 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/empresa">
+                app:cardBackgroundColor="#c7dc0f04">
 
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/empresa" />
+                    android:src="@drawable/empresa"
+                    android:background="@drawable/fundo_img_card"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,22 +112,23 @@
             </android.support.v7.widget.CardView>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/cadastrar"
-            android:layout_width="180dp"
-            android:layout_height="50sp"
-            android:background="@drawable/fundo_texto_acesso"
-            android:text="Cadastre-se"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginTop="40dp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            />
+
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/cadastrar"
+        android:layout_width="280dp"
+        android:layout_height="50sp"
+        android:background="@drawable/fundo_texto_acesso"
+        android:text="Cadastre-se"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/preto"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        />
 
 </LinearLayout>
