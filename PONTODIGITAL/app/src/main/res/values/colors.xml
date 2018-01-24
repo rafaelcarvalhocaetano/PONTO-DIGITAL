@@ -2,11 +2,11 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
     <color name="texto_botao">#FFFFFF</color>
 
     <color name="empresa">#55FFFFFF</color>
     <color name="view_card">#FFFFFF</color>
     <color name="card_text">#000000</color>
-    <color name="cor_branca">#FFFFFF</color>
+    <color name="cor_branca">#88FFFFFF</color>
 </resources>
