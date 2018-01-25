@@ -8,27 +8,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pontodigital.pontodigital.MainActivity"
-    android:background="@drawable/img6">
+    android:background="@drawable/star13">
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:elevation="20dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/fundo_img_card"
         android:src="@drawable/logo"/>
 
-    <TextView
-        android:elevation="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PONTO DIGITAL"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/texto_botao"/>
     <TextView
         android:id="@+id/acesso"
         android:layout_width="300dp"
@@ -37,9 +27,10 @@
         android:gravity="center"
         android:text="ACESSAR"
         android:textSize="20sp"
-        android:layout_marginTop="90dp"
+        android:textStyle="bold"
+        android:layout_marginTop="120dp"
         android:background="@drawable/fundo_botao"
-        android:textColor="#1f57d1"
+        android:textColor="@color/preto"
         android:clickable="true"
         android:elevation="10dp"
         android:foreground="?android:attr/selectableItemBackground"/>
