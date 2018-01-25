@@ -15,5 +15,12 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastrar_empresa);
+
+        //XX.XXX.XXX/0001-XX  cnpj
+        /*
+        SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
+            MaskTextWatcher mtw = new MaskTextWatcher(myEditText, msf)
+            myEditText.addTextChangedListener(mtw);
+         */
     }
 }
