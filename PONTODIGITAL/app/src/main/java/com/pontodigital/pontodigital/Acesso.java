@@ -17,6 +17,8 @@ public class Acesso extends AppCompatActivity {
 
 
     private TextView cadastro;
+    private CardView card_empresa;
+    private CardView card_posto;
 
 
     @Override
@@ -26,6 +28,8 @@ public class Acesso extends AppCompatActivity {
 
 
         cadastro = (TextView) findViewById(R.id.cadastrar);
+        card_empresa = (CardView) findViewById(R.id.card_empresa);
+        card_posto = (CardView) findViewById(R.id.card_posto);
 
 
         cadastro.setOnClickListener(new View.OnClickListener() {
