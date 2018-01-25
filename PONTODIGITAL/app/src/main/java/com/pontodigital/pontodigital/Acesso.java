@@ -32,6 +32,22 @@ public class Acesso extends AppCompatActivity {
         card_posto = (CardView) findViewById(R.id.card_posto);
 
 
+        card_empresa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Acesso.this, EmpresaActivity.class));
+                finish();
+            }
+        });
+        card_posto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Acesso.this, PostoActivity.class));
+                finish();
+            }
+        });
+
+
         cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
