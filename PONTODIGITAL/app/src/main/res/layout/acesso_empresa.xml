@@ -25,6 +25,10 @@
         android:layout_marginTop="50dp"
         android:inputType="number"
 
+        android:textColor="@color/preto"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
         android:background="@drawable/fundo_botao"
         android:drawableLeft="@drawable/businnes"
         android:drawablePadding="10dp"
@@ -43,12 +47,16 @@
         android:layout_marginTop="50dp"
         android:inputType="numberPassword"
 
+        android:textColor="@color/preto"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
         android:background="@drawable/fundo_botao"
         android:drawableLeft="@drawable/cadeado"
         android:drawablePadding="10dp"
         android:paddingLeft="10dp"
 
-        android:hint="Usuário"
+        android:hint="Senha"
         android:maxLength="8"
         android:textColorHint="@color/preto"/>
 
@@ -67,7 +75,5 @@
         android:textStyle="bold"
 
         android:background="@drawable/fundo_botao"/>
-
-
 
 </LinearLayout>

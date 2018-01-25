@@ -55,7 +55,7 @@
         android:textColor="@color/preto"
         android:textSize="15sp"
 
-        android:hint="Usuário"
+        android:hint="Senha"
         android:maxEms="8"
         android:textColorHint="@color/preto"/>
 
