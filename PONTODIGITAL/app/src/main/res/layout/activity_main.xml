@@ -20,6 +20,7 @@
         android:src="@drawable/logo"/>
 
     <TextView
+        android:elevation="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PONTO DIGITAL"
@@ -38,10 +39,12 @@
         android:textSize="20sp"
         android:layout_marginTop="90dp"
         android:background="@drawable/fundo_botao"
-        android:textColor="@color/texto_botao"
+        android:textColor="#1f57d1"
         android:clickable="true"
+        android:elevation="10dp"
         android:foreground="?android:attr/selectableItemBackground"/>
     <TextView
+        android:layout_marginTop="10dp"
         android:elevation="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
