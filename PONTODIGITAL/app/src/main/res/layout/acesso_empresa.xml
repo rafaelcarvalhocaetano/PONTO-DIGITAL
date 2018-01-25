@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundo_pd">
+    android:background="@drawable/star10">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,12 +26,12 @@
         android:inputType="number"
 
         android:background="@drawable/fundo_botao"
-        android:drawableLeft="@drawable/user"
+        android:drawableLeft="@drawable/businnes"
         android:drawablePadding="10dp"
         android:paddingLeft="10dp"
 
         android:hint="Usuário"
-        android:textColorHint="@color/cor_branca"/>
+        android:textColorHint="@color/preto"/>
 
 
     <EditText
@@ -50,7 +50,7 @@
 
         android:hint="Usuário"
         android:maxLength="8"
-        android:textColorHint="@color/cor_branca"/>
+        android:textColorHint="@color/preto"/>
 
     <Button
         android:clickable="true"
@@ -61,6 +61,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="80dp"
+
+        android:textColor="@color/preto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
         android:background="@drawable/fundo_botao"/>
 
 

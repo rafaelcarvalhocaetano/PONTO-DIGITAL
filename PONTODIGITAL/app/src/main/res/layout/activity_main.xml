@@ -16,7 +16,7 @@
         android:elevation="20dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="90dp"
-        android:background="@drawable/fundo_img_card"
+        android:background="@drawable/fundo_img_logo"
         android:src="@drawable/logo"/>
 
     <TextView
