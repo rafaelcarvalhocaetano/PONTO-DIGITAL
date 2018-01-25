@@ -23,6 +23,8 @@
         <activity android:name=".Acesso"/>
         <activity android:name=".AcessoPosto"/>
         <activity android:name=".CadastroActivity"/>
+        <activity android:name=".EmpresaActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".PostoActivity" android:theme="@style/PontoStyle"/>
 
         <meta-data
             android:name="com.parse.SERVER_URL"
