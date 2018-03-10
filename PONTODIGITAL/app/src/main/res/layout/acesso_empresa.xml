@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ff">
+    android:background="@color/cor_fundo_tela">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,7 +12,8 @@
         android:text="EMPRESA"
         android:textColor="@color/branca"
         android:textStyle="bold"
-        android:textSize="70dp"
+        android:fontFamily="monospace"
+        android:textSize="60dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp"/>
 
@@ -29,13 +30,13 @@
         android:textStyle="bold"
         android:textSize="18sp"
 
-        android:background="@drawable/fundo_botao"
+        android:background="@drawable/fundo_botao_acesso"
         android:drawableLeft="@drawable/businnes"
         android:drawablePadding="10dp"
         android:paddingLeft="10dp"
 
         android:hint="Usuário"
-        android:textColorHint="@color/preto"/>
+        android:textColorHint="@color/branca"/>
 
 
     <EditText
@@ -51,14 +52,14 @@
         android:textStyle="bold"
         android:textSize="18sp"
 
-        android:background="@drawable/fundo_botao"
+        android:background="@drawable/fundo_botao_acesso"
         android:drawableLeft="@drawable/cadeado"
         android:drawablePadding="10dp"
         android:paddingLeft="10dp"
 
         android:hint="Senha"
         android:maxLength="8"
-        android:textColorHint="@color/preto"/>
+        android:textColorHint="@color/branca"/>
 
     <Button
         android:clickable="true"
@@ -70,7 +71,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="80dp"
 
-        android:textColor="@color/preto"
+        android:textColor="@color/branca"
         android:textSize="18sp"
         android:textStyle="bold"
 

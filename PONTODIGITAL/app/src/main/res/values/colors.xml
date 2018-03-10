@@ -7,9 +7,8 @@
 
     <color name="empresa">#99FFFFFF</color>
     <color name="view_card">#FFFFFF</color>
-    <color name="card_view">#77FFFFFF</color>
-    <color name="cor_branca">#22FFFFFF</color>
+    <color name="card_view">#FFFFFF</color>
     <color name="branca">#FFFFFF</color>
     <color name="preto">#000000</color>
-    <color name="cor_background_cardview">#77000000</color>
+    <color name="cor_fundo_tela">#262626</color>
 </resources>

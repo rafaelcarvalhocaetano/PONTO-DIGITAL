@@ -4,11 +4,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ff"
+    android:background="@color/cor_fundo_tela"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
@@ -28,28 +28,31 @@
                 android:elevation="10dp"
                 app:cardCornerRadius="10dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/cor_background_cardview">
+                app:cardBackgroundColor="@color/colorPrimary">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_action_business"
                     android:background="@drawable/fundo_img_card"/>
 
                 <TextView
+                    android:id="@+id/txt_empresa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="130dp"
                     android:text="EMPRESAS"
-                    android:textColor="@color/branca"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/cardview_dark_background"
                     android:textStyle="bold"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
                     android:background="@color/card_view"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,16 +60,8 @@
                     android:text="Acesso para empresa cadastradas"
                     android:textAlignment="center"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:textColor="@color/branca"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ACESSAR"
-                    android:textAlignment="center"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="70dp"
+                    android:fontFamily="monospace"
                     android:textColor="@color/branca"
                     android:textStyle="bold"/>
 
@@ -77,22 +72,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_gravity="center"
             android:paddingTop="20dp">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/card_posto"
                 android:layout_width="250dp"
                 android:layout_height="200dp"
-                android:layout_margin="10dp"
                 app:cardCornerRadius="10dp"
                 android:elevation="10dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/cor_background_cardview">
+                app:cardBackgroundColor="@color/colorPrimary">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_location_on"
@@ -102,53 +97,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|top"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="130dp"
                     android:text="POSTO"
-                    android:textColor="@color/branca"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="monospace"
                     android:textStyle="bold"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_gravity="center"
-                    android:background="@color/card_view"/>
+                    android:background="@color/card_view"
+                    android:layout_marginTop="20dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Acesso para postos cadastrados"
                     android:textAlignment="center"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
+                    android:fontFamily="monospace"
+                    android:layout_marginTop="70dp"
                     android:textColor="@color/branca"
                     android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ACESSAR"
-                    android:textAlignment="center"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="80dp"
-                    android:textColor="@color/branca"
-                    android:textStyle="bold"/>
+
 
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/cadastrar"
-            android:layout_width="250dp"
-            android:layout_height="50sp"
-            android:background="@drawable/fundo_botao"
-            android:text="CADASTRE-SE"
+        <Button
+            android:id="@+id/acesso"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:textColor="@color/preto"
-            android:textStyle="bold"
+            android:text="ACESSAR"
             android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/fundo_botao"
+            android:textColor="@color/branca"
             android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            />
+            android:fontFamily="monospace"
+            android:elevation="10dp"/>
 
     </LinearLayout>
 

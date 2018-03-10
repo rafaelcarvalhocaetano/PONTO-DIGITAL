@@ -27,7 +27,6 @@ public class Acesso extends AppCompatActivity {
         setContentView(R.layout.acesso);
 
 
-        cadastro = (TextView) findViewById(R.id.cadastrar);
         card_empresa = (CardView) findViewById(R.id.card_empresa);
         card_posto = (CardView) findViewById(R.id.card_posto);
 

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ff"
+    android:background="@color/cor_fundo_tela"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -12,11 +12,13 @@
         android:text="CADASTRAMENTO DE EMPRESAS"
         android:layout_marginTop="40dp"
 
-        android:textSize="35sp"
+        android:textSize="20sp"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:elegantTextHeight="true"/>
+        android:elegantTextHeight="true"
+
+        android:layout_gravity="center"/>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -38,7 +40,8 @@
 
             android:textColor="@color/branca"
             android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:fontFamily="monospace"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -60,7 +63,8 @@
 
             android:textColor="@color/branca"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -86,7 +90,9 @@
             android:inputType="numberPassword"
             android:textColor="@color/branca"
             android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:hint="Senha"
+            android:textColorHint="@color/branca"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -95,7 +101,7 @@
         android:layout_height="wrap_content"
 
         android:text="cadastrar"
-        android:textColor="@color/preto"
+        android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:textStyle="bold"
 

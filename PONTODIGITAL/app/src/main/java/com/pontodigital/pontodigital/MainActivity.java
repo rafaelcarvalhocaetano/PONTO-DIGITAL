@@ -2,6 +2,7 @@ package com.pontodigital.pontodigital;
 
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,17 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
         Parse.initialize(this);
 
-        final Intent i = new Intent(MainActivity.this, Acesso.class);
+        Handler temp = new Handler();
 
-
-        btn.setOnClickListener(new View.OnClickListener() {
+        temp.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                startActivity(i);
+            public void run() {
+                Intent i = new Intent(MainActivity.this, Acesso.class);
+                startActivity( i );
                 finish();
             }
-        });
-
+        }, 1200);
     }
 
 

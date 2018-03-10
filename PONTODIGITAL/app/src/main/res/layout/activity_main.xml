@@ -8,40 +8,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pontodigital.pontodigital.MainActivity"
-    android:background="@drawable/ff">
+    android:background="@color/cor_fundo_tela">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
         android:elevation="20dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/fundo_img_logo"
-        android:src="@drawable/logo"/>
-
-    <TextView
-        android:id="@+id/acesso"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="ACESSAR"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/fundo_botao"
-        android:textColor="@color/preto"
-        android:clickable="true"
-        android:elevation="10dp"
-        android:foreground="?android:attr/selectableItemBackground"/>
-    <TextView
-        android:layout_marginTop="10dp"
-        android:elevation="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="By Rafael Carvalho"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/empresa"
-        android:textStyle="bold"/>
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
 
 </LinearLayout>
