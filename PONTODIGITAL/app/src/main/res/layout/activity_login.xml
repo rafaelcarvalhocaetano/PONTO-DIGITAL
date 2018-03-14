@@ -158,7 +158,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
 
-                android:background="@drawable/fundo_botao"/>
+                android:background="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/btn_login_posto"
@@ -171,7 +171,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/fundo_botao"/>
+                android:background="@color/btn_posto"/>
 
             <TextView
                 android:id="@+id/cadastrar_empresa"
