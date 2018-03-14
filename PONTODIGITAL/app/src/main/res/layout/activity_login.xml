@@ -30,6 +30,7 @@
             android:layout_margin="20dp">
 
             <EditText
+                android:id="@+id/edit_cnpj"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
@@ -49,6 +50,7 @@
                 android:textColorHint="@color/branca"/>
 
             <EditText
+                android:id="@+id/senha_empresa"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
@@ -69,7 +71,7 @@
                 android:textColorHint="@color/branca"/>
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/ck2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lembrar CNPJ" />
@@ -93,11 +95,12 @@
             android:layout_margin="20dp">
 
             <EditText
+                android:id="@+id/nome_posto"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
                 android:layout_marginTop="5dp"
-                android:inputType="number"
+                android:inputType="textAutoCorrect"
 
                 android:textColor="@color/branca"
                 android:textStyle="bold"
@@ -112,6 +115,7 @@
                 android:textColorHint="@color/branca"/>
 
             <EditText
+                android:id="@+id/senha_posto"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
@@ -132,7 +136,7 @@
                 android:textColorHint="@color/branca"/>
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/ck1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lebrar Login do POSTO" />
@@ -181,7 +185,7 @@
                 android:textColor="@color/branca"
                 android:textStyle="bold"
                 android:fontFamily="monospace"
-                android:textSize="15sp"
+                android:textSize="16sp"
                 android:layout_gravity="center_horizontal"
 
                 android:layout_marginTop="20dp"
