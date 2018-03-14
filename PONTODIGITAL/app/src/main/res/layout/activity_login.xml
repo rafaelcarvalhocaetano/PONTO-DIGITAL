@@ -32,18 +32,18 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="text"
 
-                android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
-
-                android:fontFamily="monospace"
+                android:layout_marginTop="5dp"
+                android:inputType="number"
 
                 android:textColor="@color/branca"
                 android:textStyle="bold"
                 android:textSize="18sp"
+
+                android:background="@drawable/fundo_botao_acesso"
+                android:drawableLeft="@drawable/ic_empresa"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
 
                 android:hint="CNPJ da Empresa"
                 android:textColorHint="@color/branca"/>
@@ -53,22 +53,26 @@
                 android:layout_height="50dp"
 
                 android:layout_marginTop="5dp"
-
                 android:inputType="numberPassword"
-                android:fontFamily="monospace"
-
-                android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/cadeado"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
 
                 android:textColor="@color/branca"
                 android:textStyle="bold"
                 android:textSize="18sp"
 
+                android:background="@drawable/fundo_botao_acesso"
+                android:drawableLeft="@drawable/ic_cadeado"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+
                 android:hint="Senha"
-                android:maxEms="8"
+                android:maxLength="8"
                 android:textColorHint="@color/branca"/>
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lembrar CNPJ" />
 
         </LinearLayout>
 
@@ -100,7 +104,7 @@
                 android:textSize="18sp"
 
                 android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/businnes"
+                android:drawableLeft="@drawable/ic_localidade"
                 android:drawablePadding="10dp"
                 android:paddingLeft="10dp"
 
@@ -119,27 +123,36 @@
                 android:textSize="18sp"
 
                 android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/cadeado"
+                android:drawableLeft="@drawable/ic_cadeado"
                 android:drawablePadding="10dp"
                 android:paddingLeft="10dp"
 
                 android:hint="Senha"
                 android:maxLength="8"
                 android:textColorHint="@color/branca"/>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lebrar Login do POSTO" />
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btn_login_empresa"
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
+                android:text="@string/txt_btn_login_empresa"
 
                 android:textColor="@color/branca"
                 android:textSize="18sp"
@@ -152,26 +165,26 @@
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
+                android:text="LOGIN POSTO"
 
                 android:textColor="@color/branca"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginTop="5dp"
-
                 android:background="@drawable/fundo_botao"/>
 
             <TextView
+                android:id="@+id/cadastrar_empresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Empresa não Cadastrada? Cadastre-se"
                 android:textColor="@color/branca"
                 android:textStyle="bold"
                 android:fontFamily="monospace"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:layout_gravity="center_horizontal"
 
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"/>
         </LinearLayout>
 
