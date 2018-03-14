@@ -5,196 +5,200 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="POSTO"
-            android:textColor="@color/branca"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:layout_marginTop="10dp"
-            android:textSize="40sp"
-            android:layout_gravity="center_horizontal"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="20dp">
-
-            <EditText
-                android:id="@+id/edit_cnpj"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:layout_marginTop="5dp"
-                android:inputType="number"
-
-                android:textColor="@color/branca"
-                android:textStyle="bold"
-                android:textSize="18sp"
-
-                android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/ic_empresa"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
-
-                android:hint="CNPJ da Empresa"
-                android:textColorHint="@color/branca"/>
-
-            <EditText
-                android:id="@+id/senha_empresa"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:layout_marginTop="5dp"
-                android:inputType="numberPassword"
-
-                android:textColor="@color/branca"
-                android:textStyle="bold"
-                android:textSize="18sp"
-
-                android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/ic_cadeado"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
-
-                android:hint="Senha"
-                android:maxLength="8"
-                android:textColorHint="@color/branca"/>
-
-            <CheckBox
-                android:id="@+id/ck2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lembrar CNPJ" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="EMPRESA"
-            android:textColor="@color/branca"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-            android:textSize="40sp"
-            android:layout_gravity="center_horizontal"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
-
-            <EditText
-                android:id="@+id/nome_posto"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:layout_marginTop="5dp"
-                android:inputType="textAutoCorrect"
-
-                android:textColor="@color/branca"
-                android:textStyle="bold"
-                android:textSize="18sp"
-
-                android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/ic_localidade"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
-
-                android:hint="Posto"
-                android:textColorHint="@color/branca"/>
-
-            <EditText
-                android:id="@+id/senha_posto"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:layout_marginTop="5dp"
-                android:inputType="numberPassword"
-
-                android:textColor="@color/branca"
-                android:textStyle="bold"
-                android:textSize="18sp"
-
-                android:background="@drawable/fundo_botao_acesso"
-                android:drawableLeft="@drawable/ic_cadeado"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
-
-                android:hint="Senha"
-                android:maxLength="8"
-                android:textColorHint="@color/branca"/>
-
-            <CheckBox
-                android:id="@+id/ck1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lebrar Login do POSTO" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/btn_login_empresa"
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_btn_login_empresa"
-
-                android:textColor="@color/branca"
-                android:textSize="18sp"
-                android:textStyle="bold"
-
-                android:background="@color/colorPrimary"/>
-
-            <Button
-                android:id="@+id/btn_login_posto"
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="LOGIN POSTO"
-
-                android:textColor="@color/branca"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:background="@color/btn_posto"/>
+            android:layout_gravity="center">
 
             <TextView
-                android:id="@+id/cadastrar_empresa"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Empresa não Cadastrada? Cadastre-se"
+                android:text="EMPRESA"
                 android:textColor="@color/branca"
                 android:textStyle="bold"
                 android:fontFamily="monospace"
-                android:textSize="16sp"
-                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
 
-                android:layout_marginTop="20dp"
-                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <EditText
+                    android:id="@+id/edit_cnpj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+                    android:layout_marginTop="5dp"
+                    android:inputType="number"
+
+                    android:textColor="@color/branca"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+
+                    android:background="@drawable/fundo_botao_acesso"
+                    android:drawableLeft="@drawable/ic_empresa"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
+
+                    android:hint="CNPJ da Empresa"
+                    android:textColorHint="@color/branca"/>
+
+                <EditText
+                    android:id="@+id/senha_empresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+                    android:layout_marginTop="5dp"
+                    android:inputType="numberPassword"
+
+                    android:textColor="@color/branca"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+
+                    android:background="@drawable/fundo_botao_acesso"
+                    android:drawableLeft="@drawable/ic_cadeado"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
+
+                    android:hint="Senha"
+                    android:maxLength="8"
+                    android:textColorHint="@color/branca"/>
+
+                <CheckBox
+                    android:id="@+id/ck2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lembrar CNPJ" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POSTO"
+                android:textColor="@color/branca"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <EditText
+                    android:id="@+id/nome_posto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+                    android:layout_marginTop="5dp"
+                    android:inputType="textAutoCorrect"
+
+                    android:textColor="@color/branca"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+
+                    android:background="@drawable/fundo_botao_acesso"
+                    android:drawableLeft="@drawable/ic_localidade"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
+
+                    android:hint="Posto"
+                    android:textColorHint="@color/branca"/>
+
+                <EditText
+                    android:id="@+id/senha_posto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+                    android:layout_marginTop="5dp"
+                    android:inputType="numberPassword"
+
+                    android:textColor="@color/branca"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+
+                    android:background="@drawable/fundo_botao_acesso"
+                    android:drawableLeft="@drawable/ic_cadeado"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
+
+                    android:hint="Senha"
+                    android:maxLength="8"
+                    android:textColorHint="@color/branca"/>
+
+                <CheckBox
+                    android:id="@+id/ck1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lebrar Usuário" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_login_empresa"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_btn_login_empresa"
+
+                    android:textColor="@color/branca"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    android:background="@color/colorPrimary"/>
+
+                <Button
+                    android:id="@+id/btn_login_posto"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN POSTO"
+
+                    android:textColor="@color/branca"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/btn_posto"/>
+
+                <TextView
+                    android:id="@+id/cadastrar_empresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Empresa não Cadastrada? Cadastre-se aqui"
+                    android:textColor="@color/branca"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textSize="12sp"
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
         </LinearLayout>
 
-
-
-
-    </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>
