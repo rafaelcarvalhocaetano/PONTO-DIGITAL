@@ -1,115 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cor_fundo_tela"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/ic_empresa"/>
+        android:src="@drawable/ic_empresa" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CADASTRAMENTO DE EMPRESAS"
         android:layout_marginTop="5dp"
-
-        android:textSize="15sp"
         android:fontFamily="monospace"
-        android:textStyle="bold"
-        android:textColor="@color/branca"/>
 
-    <android.support.design.widget.TextInputLayout
+        android:text="CADASTRAMENTO DE EMPRESAS"
+        android:textColor="@color/branca"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        app:hintAnimationEnabled="true"
-        android:hint="Razão Social"
-        android:textColorHint="@color/branca">
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/razao_social"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textColorHint="@color/preto"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-            android:textColor="@color/branca"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:fontFamily="monospace"/>
 
-    </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Razão Social" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/edt_razao_social"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/fundo_botao_acesso"
+                android:inputType="textAutoCorrect"
 
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        app:hintAnimationEnabled="true"
-        android:hint="CNPJ"
-        android:textColorHint="@color/branca">
+                android:textColor="@color/branca"
+                android:drawablePadding="20dp"/>
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/cnpj"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CNPJ" />
 
-            android:textColor="@color/branca"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace"/>
+            <EditText
+                android:id="@+id/edt_cnpj"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/fundo_botao_acesso"
 
-    </android.support.design.widget.TextInputLayout>
+                android:inputType="number"
+                android:textColor="@color/branca"/>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Senha" />
 
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
-        app:hintAnimationEnabled="true"
-        app:passwordToggleEnabled="true"
-        app:counterEnabled="true"
-        app:counterMaxLength="8"
-        android:hint="Senha"
-        android:textColorHint="@color/branca">
+            <EditText
+                android:id="@+id/edt_senha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/fundo_botao_acesso"
+                android:inputType="numberPassword"
+                android:maxLength="8"
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLength="8"
-            android:inputType="numberPassword"
-            android:textColor="@color/branca"
-            android:textStyle="bold"
-            android:textSize="18sp"/>
+                android:textColor="@color/branca"/>
 
-    </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmação de Senha" />
+
+            <EditText
+                android:id="@+id/edt_confirmacao_senha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/fundo_botao_acesso"
+                android:inputType="numberPassword"
+                android:maxLength="8"
+                android:textColor="@color/branca"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
+        android:id="@+id/btn_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
 
         android:text="cadastrar"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_gravity="center|bottom"/>
 
-        android:background="@color/colorPrimary"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"/>
 
 </LinearLayout>

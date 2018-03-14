@@ -54,7 +54,7 @@
                     android:textColorHint="@color/branca"/>
 
                 <EditText
-                    android:id="@+id/senha_empresa"
+                    android:id="@+id/edit_senha_empresa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -76,7 +76,7 @@
                     android:textColorHint="@color/branca"/>
 
                 <CheckBox
-                    android:id="@+id/ck2"
+                    android:id="@+id/ck1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lembrar CNPJ" />
@@ -100,7 +100,7 @@
                 android:layout_margin="20dp">
 
                 <EditText
-                    android:id="@+id/nome_posto"
+                    android:id="@+id/edit_nome_posto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -121,7 +121,7 @@
                     android:textColorHint="@color/branca"/>
 
                 <EditText
-                    android:id="@+id/senha_posto"
+                    android:id="@+id/edit_senha_posto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -143,7 +143,7 @@
                     android:textColorHint="@color/branca"/>
 
                 <CheckBox
-                    android:id="@+id/ck1"
+                    android:id="@+id/ck2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lebrar Usuário" />
@@ -194,7 +194,6 @@
                     android:fontFamily="monospace"
                     android:textSize="12sp"
                     android:layout_gravity="center_horizontal"
-
                     android:layout_marginTop="20dp"
                     android:gravity="center"/>
             </LinearLayout>
