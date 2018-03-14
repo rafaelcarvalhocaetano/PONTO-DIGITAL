@@ -7,16 +7,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pontodigital.pontodigital.MainActivity"
     android:background="@color/cor_fundo_tela">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:cropToPadding="true"
-        android:elevation="20dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/logo" />
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Ponto Digital"
+            android:textColor="@color/branca"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Solução de ponto para empresas terceirizadas"
+            android:textColor="@color/branca"
+            android:fontFamily="monospace"
+            android:textSize="13sp"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
