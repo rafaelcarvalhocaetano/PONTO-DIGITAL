@@ -57,16 +57,10 @@ public class CadastroActivity extends AppCompatActivity {
 
         cnpj.addTextChangedListener(mCNPJ);
 
-        sNome = nome.getText().toString();
-        sCNPJ = cnpj.getText().toString();
-        sSENHA = senha.getText().toString();
-        cSENHA = confirmacaoSenha.getText().toString();
-
-
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isCampos(nome) == false){
+                if(isCampos(nome) == false || isCampos(cnpj) == false || isSenhas(senha, confirmacaoSenha)){
                    return;
                 }else{
                     Toast.makeText(CadastroActivity.this, "OK NOME", Toast.LENGTH_LONG).show();
@@ -96,10 +90,30 @@ public class CadastroActivity extends AppCompatActivity {
             return true;
         }
     }
+    private boolean isSenhas(EditText s1, EditText s2){
+        if(isCampos(s1) != isCampos(s2)){
+            s1.setError("Verificar senhas");
+            s2.setError("Verificar senhas");
+            return false;
+        }else{
+            return true;
+        }
+    }
     /**
      * private boolean isCampos(EditText valor){
      boolean resultado = (TextUtils.isEmpty( valor.toString() ) || valor.toString().trim().isEmpty() );
      return resultado;
+     }
+
+     final int value = Integer.valueOf(num);
+
+     Agora você tem uma váriavel chamada value que contém o valor digitado no EditText como um inteiro.
+
+     Agora você pode fazer a validação como inteiros, segue um exemplo:
+
+     if (value == 0) {
+     validar = false;
+     edtNum.setError(getString(R.string.valEdtNum));
      }
 
      * */
