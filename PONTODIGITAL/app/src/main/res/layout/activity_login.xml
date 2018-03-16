@@ -67,7 +67,7 @@
                     android:textSize="18sp"
 
                     android:background="@drawable/fundo_botao_acesso"
-                    android:drawableLeft="@drawable/ic_cadeado"
+                    android:drawableLeft="@drawable/ic_novo_cadeado"
                     android:drawablePadding="10dp"
                     android:paddingLeft="10dp"
 
@@ -134,7 +134,7 @@
                     android:textSize="18sp"
 
                     android:background="@drawable/fundo_botao_acesso"
-                    android:drawableLeft="@drawable/ic_cadeado"
+                    android:drawableLeft="@drawable/ic_novo_cadeado"
                     android:drawablePadding="10dp"
                     android:paddingLeft="10dp"
 
@@ -187,12 +187,12 @@
                 <TextView
                     android:id="@+id/cadastrar_empresa"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:text="Empresa não Cadastrada? Cadastre-se aqui"
                     android:textColor="@color/branca"
                     android:textStyle="bold"
                     android:fontFamily="monospace"
-                    android:textSize="12sp"
+                    android:textSize="15sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:gravity="center"/>

@@ -17,7 +17,9 @@ import com.github.rtoshiro.util.format.MaskFormatter;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
 import bolts.Task;
@@ -60,25 +62,41 @@ public class CadastroActivity extends AppCompatActivity {
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isCampos(nome) == false || isCampos(cnpj) == false || isSenhas(senha, confirmacaoSenha)){
-                   return;
+                if (isCampos(nome) == false || isCampos(cnpj) == false || isCampos(senha) == false || isCampos(confirmacaoSenha) == false) {
+                    return;
+                } else if (isSenhas(senha, confirmacaoSenha) == false) {
+                    Toast.makeText(CadastroActivity.this, "Verificar Senha e Confirmação de Senha", Toast.LENGTH_LONG).show();
+                    return;
                 }else{
-                    Toast.makeText(CadastroActivity.this, "OK NOME", Toast.LENGTH_LONG).show();
+                   ParseUser user = new ParseUser();
+
+
+                   user.setUsername(cnpj.getText().toString());
+                   user.setPassword(senha.getText().toString());
+
+                   user.signUpInBackground(new SignUpCallback() {
+                       @Override
+                       public void done(ParseException e) {
+                           if(e == null){
+                               ParseObject oo = new ParseObject("Empresas");
+                               oo.put("nome", nome.getText().toString());
+                               oo.put("cnpj", cnpj.getText().toString());
+                               oo.saveInBackground();
+                               Toast.makeText(CadastroActivity.this, "Cadastrado Com sucesso", Toast.LENGTH_LONG).show();
+                           }else{
+                               Toast.makeText(CadastroActivity.this, "Erro no Cadastro "+e.getMessage(), Toast.LENGTH_LONG).show();
+                           }
+                       }
+                   });
+
+
+
+
                 }
             }
         });
     }
 
-
-
-    private boolean vericarSenhas(String v1, String v2){
-        if(!v1.trim().equals( v2.trim() )){
-            return false;
-        }else{
-            return true;
-        }
-
-    }
     private boolean isCampos(EditText v){
         if(v.getText().toString().length() <= 0){
             v.setError("Verificar Campo");
@@ -90,13 +108,16 @@ public class CadastroActivity extends AppCompatActivity {
             return true;
         }
     }
+
     private boolean isSenhas(EditText s1, EditText s2){
-        if(isCampos(s1) != isCampos(s2)){
-            s1.setError("Verificar senhas");
-            s2.setError("Verificar senhas");
-            return false;
-        }else{
+
+        int valorUma = Integer.valueOf( s1.getText().toString() );
+        int valorDois = Integer.valueOf( s2.getText().toString() );
+
+        if( valorUma == valorDois ){
             return true;
+        }else{
+            return false;
         }
     }
     /**

@@ -13,93 +13,147 @@
         android:src="@drawable/ic_empresa" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="monospace"
+        android:gravity="center"
 
         android:text="CADASTRAMENTO DE EMPRESAS"
         android:textColor="@color/branca"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fundo_botao_acesso"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Razão Social" />
-
-            <EditText
-                android:id="@+id/edt_razao_social"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:background="@drawable/fundo_botao_acesso"
-                android:inputType="textAutoCorrect"
+                android:background="@drawable/fundo_edit_cadastramento"
+                android:orientation="horizontal">
 
-                android:textColor="@color/branca"
-                android:drawablePadding="20dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_empresa" />
 
-            <TextView
+                <EditText
+                    android:id="@+id/edt_razao_social"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fundo_edit_cadastramento"
+                    android:hint="Razão Social"
+
+                    android:inputType="textAutoCorrect"
+                    android:padding="10dp"
+                    android:textColor="@color/branca" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CNPJ" />
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/fundo_edit_cadastramento"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/edt_cnpj"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_cnpj" />
+
+                <EditText
+                    android:id="@+id/edt_cnpj"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fundo_edit_cadastramento"
+
+                    android:inputType="number"
+                    android:textColor="@color/branca"
+
+                    android:hint="CNPJ"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/fundo_botao_acesso"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/fundo_edit_cadastramento"
+                android:orientation="horizontal">
 
-                android:inputType="number"
-                android:textColor="@color/branca"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_novo_cadeado" />
 
-            <TextView
+                <EditText
+                    android:id="@+id/edt_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fundo_edit_cadastramento"
+                    android:inputType="numberPassword"
+                    android:maxLength="8"
+
+                    android:textColor="@color/branca"
+                    android:hint="Senha de 8 Digitos"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Senha" />
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/fundo_edit_cadastramento"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/edt_senha"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/fundo_botao_acesso"
-                android:inputType="numberPassword"
-                android:maxLength="8"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_novo_cadeado" />
 
-                android:textColor="@color/branca"/>
+                <EditText
+                    android:id="@+id/edt_confirmacao_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fundo_edit_cadastramento"
+                    android:inputType="numberPassword"
+                    android:maxLength="8"
+                    android:textColor="@color/branca"
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Confirmação de Senha" />
-
-            <EditText
-                android:id="@+id/edt_confirmacao_senha"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/fundo_botao_acesso"
-                android:inputType="numberPassword"
-                android:maxLength="8"
-                android:textColor="@color/branca"/>
-
+                    android:hint="Confirmação da Senha"
+                    android:padding="10dp"/>
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
     <Button
@@ -107,16 +161,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
+        android:layout_gravity="center|bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
 
+        android:background="@color/colorPrimary"
         android:text="cadastrar"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_gravity="center|bottom"/>
+        android:textStyle="bold" />
 
 
 </LinearLayout>
