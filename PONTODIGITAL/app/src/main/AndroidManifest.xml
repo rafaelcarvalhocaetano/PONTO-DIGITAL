@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".CadastroActivity"/>
+        <activity android:name=".DadosRecuperadosActivity" />
+        <activity android:name=".DadosRecuperadosActivity" />
 
         <meta-data
             android:name="com.parse.SERVER_URL"

@@ -1,19 +1,14 @@
 package com.pontodigital.pontodigital;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.github.rtoshiro.util.format.MaskFormatter;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 import com.parse.ParseException;
@@ -22,7 +17,6 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
-import bolts.Task;
 
 /**
  * Created by rafael on 24/01/18.
@@ -68,26 +62,32 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(CadastroActivity.this, "Verificar Senha e Confirmação de Senha", Toast.LENGTH_LONG).show();
                     return;
                 }else{
-                   ParseUser user = new ParseUser();
+
+                    final ParseUser user = new ParseUser();
+                    final ParseObject object = new ParseObject("Empresas");
+
+                    user.setUsername( cnpj.getText().toString() );
+                    user.setPassword( senha.getText().toString() );
+                    user.put("nomeempresa", nome.getText().toString());
+
+                   // object.put("username", nome.getText().toString());
+                    //object.put("nomeempresa", ParseUser.getCurrentUser().getUsername());
 
 
-                   user.setUsername(cnpj.getText().toString());
-                   user.setPassword(senha.getText().toString());
 
-                   user.signUpInBackground(new SignUpCallback() {
-                       @Override
-                       public void done(ParseException e) {
-                           if(e == null){
-                               ParseObject oo = new ParseObject("Empresas");
-                               oo.put("nome", nome.getText().toString());
-                               oo.put("cnpj", cnpj.getText().toString());
-                               oo.saveInBackground();
-                               Toast.makeText(CadastroActivity.this, "Cadastrado Com sucesso", Toast.LENGTH_LONG).show();
-                           }else{
-                               Toast.makeText(CadastroActivity.this, "Erro no Cadastro "+e.getMessage(), Toast.LENGTH_LONG).show();
-                           }
-                       }
-                   });
+                    user.signUpInBackground(new SignUpCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if(e == null){
+
+                                object.saveInBackground();
+                                Toast.makeText(CadastroActivity.this, "CADASTRADO", Toast.LENGTH_SHORT).show();
+                                newScrren();
+                            }else{
+                                Toast.makeText(CadastroActivity.this, "ERRO NO CADASTRO"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
 
 
 
@@ -95,6 +95,12 @@ public class CadastroActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void newScrren(){
+        Intent i = new Intent(this, DadosRecuperadosActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private boolean isCampos(EditText v){
@@ -121,35 +127,11 @@ public class CadastroActivity extends AppCompatActivity {
         }
     }
     /**
-     * private boolean isCampos(EditText valor){
-     boolean resultado = (TextUtils.isEmpty( valor.toString() ) || valor.toString().trim().isEmpty() );
-     return resultado;
-     }
-
-     final int value = Integer.valueOf(num);
-
-     Agora você tem uma váriavel chamada value que contém o valor digitado no EditText como um inteiro.
-
-     Agora você pode fazer a validação como inteiros, segue um exemplo:
-
-     if (value == 0) {
-     validar = false;
-     edtNum.setError(getString(R.string.valEdtNum));
-     }
-
-     * */
-
-
-
-    /**
-     *
-
      XX.XXX.XXX/0001-XX  cnpj
 
      SimpleMaskFormatter smf = new SimpleMaskFormatter("NN/NN/NNNN");
      MaskTextWatcher mtw = new MaskTextWatcher(myEditText, msf)
      myEditText.addTextChangedListener(mtw);
-
 
      */
     }
