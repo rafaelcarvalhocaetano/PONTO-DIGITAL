@@ -1,13 +1,10 @@
 package com.pontodigital.pontodigital;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 /**
@@ -28,12 +25,14 @@ public class DadosRecuperadosActivity extends AppCompatActivity {
         nome = (TextView) findViewById(R.id.nome_empresa);
 
 
-       //recuperando dados de FeedUsuario
-         Intent intent = getIntent();
-         String user = intent.getStringExtra("nomeempresa");
+        /*
+         * recuperando dados de FeedUsuario
+            Intent intent = getIntent();
+            String user = intent.getStringExtra("nomeempresa");
+         *
+         */
 
-
-
+         //nome.setText((String) ParseUser.getCurrentUser().get("nomeempresa"));
          nome.setText((String) ParseUser.getCurrentUser().get("nomeempresa"));
 
 
