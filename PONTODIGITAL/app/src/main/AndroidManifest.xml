@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".cadastro.LoginActivity"/>
         <activity android:name=".cadastro.CadastroActivity"/>
-        <activity android:name=".DadosRecuperadosActivity" />
+        <activity android:name=".cadastro.CadastroPostoActivity" />
         <activity android:name=".EmpresaActivity" />
 
         <meta-data

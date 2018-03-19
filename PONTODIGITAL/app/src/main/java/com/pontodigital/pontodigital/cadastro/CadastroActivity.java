@@ -15,7 +15,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
-import com.pontodigital.pontodigital.DadosRecuperadosActivity;
+import com.pontodigital.pontodigital.EmpresaActivity;
 import com.pontodigital.pontodigital.R;
 
 
@@ -40,7 +40,7 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cadastrar_empresa);
+        setContentView(R.layout.activity_cadastrar_empresa);
 
         nome = (EditText) findViewById(R.id.edt_razao_social);
         cnpj = (EditText) findViewById(R.id.edt_cnpj);
@@ -62,35 +62,32 @@ public class CadastroActivity extends AppCompatActivity {
                 } else if (isSenhas(senha, confirmacaoSenha) == false) {
                     Toast.makeText(CadastroActivity.this, "Verificar Senha e Confirmação de Senha", Toast.LENGTH_LONG).show();
                     return;
-                }else{
+                } else {
 
                     final ParseUser user = new ParseUser();
                     final ParseObject object = new ParseObject("Empresas");
 
-                    user.setUsername( cnpj.getText().toString() );
-                    user.setPassword( senha.getText().toString() );
+                    user.setUsername(cnpj.getText().toString());
+                    user.setPassword(senha.getText().toString());
                     user.put("nomeempresa", nome.getText().toString());
 
-                   // object.put("username", nome.getText().toString());
+                    // object.put("username", nome.getText().toString());
                     //object.put("nomeempresa", ParseUser.getCurrentUser().getUsername());
-
 
 
                     user.signUpInBackground(new SignUpCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if(e == null){
+                            if (e == null) {
 
                                 object.saveInBackground();
                                 Toast.makeText(CadastroActivity.this, "CADASTRADO", Toast.LENGTH_SHORT).show();
                                 newScrren();
-                            }else{
-                                Toast.makeText(CadastroActivity.this, "ERRO NO CADASTRO"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(CadastroActivity.this, "ERRO NO CADASTRO" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-
-
 
 
                 }
@@ -98,32 +95,32 @@ public class CadastroActivity extends AppCompatActivity {
         });
     }
 
-    private void newScrren(){
-        Intent i = new Intent(this, DadosRecuperadosActivity.class);
+    private void newScrren() {
+        Intent i = new Intent(this, EmpresaActivity.class);
         startActivity(i);
         finish();
     }
 
-    private boolean isCampos(EditText v){
-        if(v.getText().toString().length() <= 0){
+    private boolean isCampos(EditText v) {
+        if (v.getText().toString().length() <= 0) {
             v.setError("Verificar Campo");
             return false;
-        }else if(v.getText().toString().trim().equals("")){
+        } else if (v.getText().toString().trim().equals("")) {
             v.setError("Colocando Espaços");
             return false;
-        }else{
+        } else {
             return true;
         }
     }
 
-    private boolean isSenhas(EditText s1, EditText s2){
+    private boolean isSenhas(EditText s1, EditText s2) {
 
-        int valorUma = Integer.valueOf( s1.getText().toString() );
-        int valorDois = Integer.valueOf( s2.getText().toString() );
+        int valorUma = Integer.valueOf(s1.getText().toString());
+        int valorDois = Integer.valueOf(s2.getText().toString());
 
-        if( valorUma == valorDois ){
+        if (valorUma == valorDois) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -135,4 +132,4 @@ public class CadastroActivity extends AppCompatActivity {
      myEditText.addTextChangedListener(mtw);
 
      */
-    }
+}

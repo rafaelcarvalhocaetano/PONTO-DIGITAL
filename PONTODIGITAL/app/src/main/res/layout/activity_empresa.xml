@@ -9,36 +9,45 @@
     android:id="@+id/drawer_layout"
     android:layout_gravity="right"
     android:fitsSystemWindows="true"
-    tools:openDrawer="end"
+    tools:openDrawer="start"
     android:background="@color/branca">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="55dp">
-
-        <TextView
-            android:id="@+id/edit_nome_empresa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rafael"
-            android:gravity="center"
-            android:textColor="@color/preto"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace"
-
-            android:layout_marginTop="10dp"/>
+        android:gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/edit_nome_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rafael"
+                android:textColor="@color/preto"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/edit_cnpj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11.111.1111/11111-11"
+                android:textColor="@color/preto"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
 
             <ScrollView
                 android:id="@+id/scrool_view"
@@ -57,7 +66,22 @@
                         android:layout_margin="5dp"
                         android:background="@drawable/fundo_botao_acesso">
 
+                        <ImageView
+                            android:id="@+id/img_posto"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_usuario"/>
+
+                        <View
+                            android:id="@+id/view_pipe"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/branca"/>
+
                         <TextView
+                            android:id="@+id/numero_cadastro"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -67,12 +91,13 @@
                             android:textColor="@color/branca"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:fontFamily="monospace"/>
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="wrap_content"
-                            android:background="@color/branca"/>
+                            android:fontFamily="monospace"
+                            android:background="@drawable/fundo_botao_acesso"
+                            android:layout_marginLeft="5dp"/>
+
+
                         <TextView
+                            android:id="@+id/nome_posto"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -90,12 +115,6 @@
             </ScrollView>
 
         </LinearLayout>
-
-
-
-
-
-
 
     </LinearLayout>
 

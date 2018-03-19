@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.ParseUser;
+import com.pontodigital.pontodigital.cadastro.CadastroPostoActivity;
 import com.pontodigital.pontodigital.cadastro.LoginActivity;
 
 
@@ -94,6 +95,9 @@ public class EmpresaActivity extends AppCompatActivity implements NavigationView
 
             case R.id.menu_cad_posto:
                 Toast.makeText(this, "CADASTRAMENTO DE POSTO", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(EmpresaActivity.this, CadastroPostoActivity.class);
+                startActivity(i);
+                finish();
                 break;
             case R.id.menu_verifica_posto:
                 Toast.makeText(this, "VERIFICAÇÃO DE POSTO", Toast.LENGTH_SHORT).show();

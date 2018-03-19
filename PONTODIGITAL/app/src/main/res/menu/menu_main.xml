@@ -5,14 +5,17 @@
     <group android:checkableBehavior="single">
 
         <item
+            android:icon="@drawable/ic_usuario"
             android:id="@+id/menu_cad_posto"
             android:title="Cadastrar Posto"/>
 
         <item
+            android:icon="@drawable/ic_empresa"
             android:id="@+id/menu_verifica_posto"
             android:title="Verificar Postos Cadastrado"/>
 
         <item
+            android:icon="@drawable/ic_lixeira"
             android:id="@+id/menu_excluir_posto"
             android:title="Excluir Posto"/>
     </group>
@@ -21,6 +24,7 @@
 
         <menu>
             <item
+                android:icon="@drawable/ic_sair"
                 android:id="@+id/menu_sair"
                 android:title="Sair"/>
         </menu>
