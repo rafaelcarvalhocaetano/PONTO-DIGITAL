@@ -9,8 +9,98 @@
     android:id="@+id/drawer_layout"
     android:layout_gravity="right"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
+    tools:openDrawer="end"
     android:background="@color/branca">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="55dp">
+
+        <TextView
+            android:id="@+id/edit_nome_empresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rafael"
+            android:gravity="center"
+            android:textColor="@color/preto"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ScrollView
+                android:id="@+id/scrool_view"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/fundo_edit_cadastramento">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/fundo_botao_acesso">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+
+                            android:text="123"
+                            android:textColor="@color/branca"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/branca"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+
+                            android:text="Blablabla"
+                            android:textColor="@color/branca"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="monospace"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
 
     <include layout="@layout/toobar"/>
 
@@ -19,7 +109,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
         app:menu="@menu/menu_main"
         android:elevation="10dp"/>
 

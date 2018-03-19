@@ -12,6 +12,10 @@ import android.widget.TextView;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.pontodigital.pontodigital.EmpresaActivity;
 import com.pontodigital.pontodigital.R;
 
 
@@ -52,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
         btnPosto = (Button) findViewById(R.id.btn_login_posto);
 
 
-
         SimpleMaskFormatter SimpleCNPJ = new SimpleMaskFormatter("NN.NNN.NNN/NNNN-NN");
         MaskTextWatcher mCNPJ = new MaskTextWatcher(cnpj, SimpleCNPJ);
 
@@ -67,8 +70,37 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btnEmpresa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*
+                Intent i = new Intent(LoginActivity.this, EmpresaActivity.class);
+                startActivity(i);
+                finish();
+                */
+               String user = cnpj.getText().toString();
+               String pass = senhaEmpresa.getText().toString();
+
+                ParseUser.logInInBackground(user, pass, new LogInCallback() {
+                    @Override
+                    public void done(ParseUser user, ParseException e) {
+
+                        if(e == null){
+                            windows();
+                        }
+                    }
+                });
+            }
+        });
 
 
 
+
+    }
+
+    private void windows(){
+        Intent i = new Intent(getApplicationContext(), EmpresaActivity.class);
+        startActivity(i);
+        finish();
     }
 }

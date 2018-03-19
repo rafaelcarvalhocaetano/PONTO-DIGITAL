@@ -9,7 +9,7 @@
         android:id="@+id/toobar_pd"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/cardview_dark_background"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
 </LinearLayout>
