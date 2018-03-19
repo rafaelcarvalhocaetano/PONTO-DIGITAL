@@ -1,10 +1,9 @@
-package com.pontodigital.pontodigital;
+package com.pontodigital.pontodigital.cadastro;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -13,6 +12,7 @@ import android.widget.TextView;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+import com.pontodigital.pontodigital.R;
 
 
 /**

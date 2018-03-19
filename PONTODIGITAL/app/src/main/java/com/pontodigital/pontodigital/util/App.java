@@ -1,4 +1,4 @@
-package com.pontodigital.pontodigital;
+package com.pontodigital.pontodigital.util;
 
 import android.app.Application;
 

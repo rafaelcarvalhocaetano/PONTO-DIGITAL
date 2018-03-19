@@ -10,6 +10,7 @@ import android.widget.TextView;
 //config. parse
 
 import com.parse.Parse;
+import com.pontodigital.pontodigital.cadastro.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 

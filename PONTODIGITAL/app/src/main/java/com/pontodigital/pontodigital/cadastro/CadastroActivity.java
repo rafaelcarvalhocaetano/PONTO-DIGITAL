@@ -1,4 +1,4 @@
-package com.pontodigital.pontodigital;
+package com.pontodigital.pontodigital.cadastro;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,9 @@ import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
+import com.pontodigital.pontodigital.DadosRecuperadosActivity;
+import com.pontodigital.pontodigital.R;
 
 
 /**
