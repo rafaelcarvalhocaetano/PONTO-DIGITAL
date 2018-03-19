@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
@@ -16,6 +17,7 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.pontodigital.pontodigital.EmpresaActivity;
+import com.pontodigital.pontodigital.PostoActivity;
 import com.pontodigital.pontodigital.R;
 
 
@@ -73,33 +75,69 @@ public class LoginActivity extends AppCompatActivity {
         btnEmpresa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                Intent i = new Intent(LoginActivity.this, EmpresaActivity.class);
-                startActivity(i);
-                finish();
-                */
-               String user = cnpj.getText().toString();
-               String pass = senhaEmpresa.getText().toString();
+               if(isCampos(cnpj) == false || isCampos(senhaEmpresa) == false){
+                   Toast.makeText(LoginActivity.this, "Erro Verificar Campos", Toast.LENGTH_SHORT ).show();
+                   return;
+               }else{
+                   String user = cnpj.getText().toString().toUpperCase();
+                   String pass = senhaEmpresa.getText().toString();
 
-                ParseUser.logInInBackground(user, pass, new LogInCallback() {
-                    @Override
-                    public void done(ParseUser user, ParseException e) {
-
-                        if(e == null){
-                            windows();
-                        }
-                    }
-                });
+                   ParseUser.logInInBackground(user, pass, new LogInCallback() {
+                       @Override
+                       public void done(ParseUser user, ParseException e) {
+                           if(e == null){
+                               windowsWork();
+                           }
+                       }
+                   });
+               }
             }
         });
 
 
+        btnPosto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                if (isCampos(posto) == false || isCampos(senhaPosto) == false) {
+                    Toast.makeText(LoginActivity.this, "Erro Verificar Campos", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    String postoTrabalho = posto.getText().toString().toUpperCase();
+                    String pass = senhaPosto.getText().toString();
 
+                    ParseUser.logInInBackground(postoTrabalho, pass, new LogInCallback() {
+                        @Override
+                        public void done(ParseUser user, ParseException e) {
+                            if (e == null) {
+                                windowsPost();
+                            }
+                        }
+                    });
+                }
+            }
+        });
     }
 
-    private void windows(){
+
+    private boolean isCampos(EditText v) {
+        if (v.getText().toString().length() <= 0) {
+            v.setError("Verificar Campo");
+            return false;
+        } else if (v.getText().toString().trim().equals("")) {
+            v.setError("Colocando Espaços");
+            return false;
+        } else {
+            return true;
+        }
+    }
+    private void windowsWork(){
         Intent i = new Intent(getApplicationContext(), EmpresaActivity.class);
+        startActivity(i);
+        finish();
+    }
+    private void windowsPost(){
+        Intent i = new Intent(getApplicationContext(), PostoActivity.class);
         startActivity(i);
         finish();
     }

@@ -3,10 +3,13 @@ package com.pontodigital.pontodigital.cadastro;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
@@ -37,6 +40,8 @@ public class CadastroActivity extends AppCompatActivity {
     private String sSENHA;
     private String cSENHA;
 
+    private LinearLayout ll;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +51,8 @@ public class CadastroActivity extends AppCompatActivity {
         cnpj = (EditText) findViewById(R.id.edt_cnpj);
         senha = (EditText) findViewById(R.id.edt_senha);
         confirmacaoSenha = (EditText) findViewById(R.id.edt_confirmacao_senha);
+
+        ll = (LinearLayout) findViewById(R.id.ll);
 
         cadastrar = (Button) findViewById(R.id.btn_cadastrar);
 
@@ -67,9 +74,9 @@ public class CadastroActivity extends AppCompatActivity {
                     final ParseUser user = new ParseUser();
                     final ParseObject object = new ParseObject("Empresas");
 
-                    user.setUsername(cnpj.getText().toString());
+                    user.setUsername(cnpj.getText().toString().toUpperCase());
                     user.setPassword(senha.getText().toString());
-                    user.put("nomeempresa", nome.getText().toString());
+                    user.put("nomeempresa", nome.getText().toString().toUpperCase());
 
                     // object.put("username", nome.getText().toString());
                     //object.put("nomeempresa", ParseUser.getCurrentUser().getUsername());
@@ -93,6 +100,19 @@ public class CadastroActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(ll.isClickable() == false){
+            Intent i = new Intent(CadastroActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }else{
+            super.onBackPressed();
+        }
+
     }
 
     private void newScrren() {

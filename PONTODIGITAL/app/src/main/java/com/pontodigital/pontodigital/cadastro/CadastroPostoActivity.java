@@ -51,7 +51,7 @@ public class CadastroPostoActivity extends AppCompatActivity {
                 } else {
                     ParseUser user = new ParseUser();
 
-                    user.setUsername( posto.getText().toString() );
+                    user.setUsername( posto.getText().toString().toUpperCase() );
                     user.setPassword( senha.getText().toString() );
                     user.put("nomeempresa", ParseUser.getCurrentUser().get("nomeempresa"));
 
@@ -59,7 +59,7 @@ public class CadastroPostoActivity extends AppCompatActivity {
                         @Override
                         public void done(ParseException e) {
                             if( e == null ){
-                                Toast.makeText(CadastroPostoActivity.this, "Cadastrada", Toast.LENGTH_LONG).show();
+                                newScrren();
                             }else{
                                 Toast.makeText(CadastroPostoActivity.this, "Erro no cadastro do posto", Toast.LENGTH_LONG).show();
                                 return;
