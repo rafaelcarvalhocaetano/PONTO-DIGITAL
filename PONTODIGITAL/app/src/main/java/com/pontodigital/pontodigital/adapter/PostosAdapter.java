@@ -13,6 +13,7 @@ import com.parse.ParseUser;
 import com.pontodigital.pontodigital.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by rafael on 19/03/18.
@@ -23,14 +24,15 @@ public class PostosAdapter extends ArrayAdapter<ParseUser> {
     private Context context;
     private ArrayList<ParseUser> usuarios;
 
+    private TextView us;
+    private TextView num;
 
-    public PostosAdapter(@NonNull Context c, ArrayList<ParseUser> objetos) {
-        super(c, 0, objetos);
-
+    public PostosAdapter(@NonNull Context c, @NonNull ArrayList<ParseUser> objects) {
+        super(c, 0, objects);
         this.context = c;
-        this.usuarios = objetos;
-
+        this.usuarios = objects;
     }
+
 
     @NonNull
     @Override
@@ -38,15 +40,21 @@ public class PostosAdapter extends ArrayAdapter<ParseUser> {
 
         View v = convertView;
 
-        if(v == null ){
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService( context.LAYOUT_INFLATER_SERVICE );
-            v = inflater.inflate(R.layout.activity_empresa, parent, false);
-        }
-        TextView numero = (TextView) v.findViewById(R.id.numero_cadastro);
-        TextView posto = (TextView) v.findViewById(R.id.nome_posto);
+        if(v == null){
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
-        ParseUser user = usuarios.get( position );
-        posto.setText( user.getUsername() );
+            //montando a view a partir do xml
+            v = inflater.inflate(R.layout.lista_usuario, parent, false);
+        }
+
+        //recupera os elementos da activity_empresa
+        us = (TextView) v.findViewById(R.id.nome_posto);
+
+
+        //recuperando
+        ParseUser user1 = usuarios.get(position);
+        us.setText( (String) user1.get("username") );
+
 
 
         return v;

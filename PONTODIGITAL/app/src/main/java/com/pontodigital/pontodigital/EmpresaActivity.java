@@ -13,12 +13,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.pontodigital.pontodigital.adapter.PostosAdapter;
 import com.pontodigital.pontodigital.cadastro.CadastroPostoActivity;
 import com.pontodigital.pontodigital.cadastro.LoginActivity;
+
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.List;
 
 
 /**
@@ -36,6 +46,11 @@ public class EmpresaActivity extends AppCompatActivity implements NavigationView
     private TextView us;
     private TextView cn;
 
+    private ListView lista;
+    private ArrayAdapter<ParseUser> adapter;
+    private ArrayList<ParseUser> usuarios;
+    private ParseQuery<ParseUser> query;
+
 
     @SuppressLint("ResourceType")
     @Override
@@ -47,6 +62,16 @@ public class EmpresaActivity extends AppCompatActivity implements NavigationView
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toobar_pd);
         navigationView = (NavigationView) findViewById(R.id.navigation);
+
+        //listando os postos
+        usuarios = new ArrayList<>();
+        lista = (ListView) findViewById(R.id.list_view_posto);
+        adapter = new PostosAdapter(EmpresaActivity.this, usuarios);
+        lista.setAdapter( adapter );
+
+
+
+        getUsuario();
 
 
         //Configurando o toobar
@@ -62,6 +87,38 @@ public class EmpresaActivity extends AppCompatActivity implements NavigationView
 
         //metodo responsável por atribuir valores ao textview do nav-header
         attValue();
+
+    }
+
+    private void getUsuario(){
+
+        query = ParseUser.getQuery();
+
+        //esta query elimina o usuário logado
+        query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername());
+        query.orderByAscending("username");
+
+        query.findInBackground(new FindCallback<ParseUser>() {
+            @Override
+            public void done(List<ParseUser> objects, ParseException e) {
+                if(e == null){
+                    //verifica se tem objetos para serem listados
+                    if(objects.size() > 0){
+                        //limpando a lista
+                        usuarios.clear();
+                        for (ParseUser u : objects){
+                            usuarios.add( u );
+                        }
+                        adapter.notifyDataSetChanged();
+
+
+                    }
+                }else{
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
     }
 
